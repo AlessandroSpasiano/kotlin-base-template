@@ -10,7 +10,7 @@ android {
     buildToolsVersion(Versions.buildTools)
 
     defaultConfig {
-        applicationId = "it.alexs.kotlinbasetemplate"
+        applicationId = Versions.applicationID
 
         minSdkVersion(Versions.minSdk)
         targetSdkVersion(Versions.targetSdk)

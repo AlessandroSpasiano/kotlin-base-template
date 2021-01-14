@@ -1,5 +1,6 @@
 object Versions {
 
+    const val applicationID = "it.alexs.kotlinbasetemplate"
     const val compileSdk = 29
     const val minSdk = 24
     const val targetSdk = 30
