@@ -4,7 +4,6 @@ plugins {
     kotlin("kapt")
 }
 
-
 android {
     compileSdkVersion(Versions.compileSdk)
     buildToolsVersion(Versions.buildTools)
@@ -38,7 +37,6 @@ android {
             versionNameSuffix = "-staging"
             matchingFallbacks.add("debug")
         }
-
     }
 
     testBuildType = "staging"
@@ -68,7 +66,7 @@ android {
         excludes.add("/META-INF/LGPL2.1")
     }
 
-    //dynamicFeatures = mutableSetOf()
+    // dynamicFeatures = mutableSetOf()
 
     sourceSets {
         getByName("staging") {
@@ -76,6 +74,11 @@ android {
                 srcDirs("src\\staging\\java")
             }
         }
+    }
+
+    lintOptions {
+        isWarningsAsErrors = true
+        isAbortOnError = true
     }
 }
 

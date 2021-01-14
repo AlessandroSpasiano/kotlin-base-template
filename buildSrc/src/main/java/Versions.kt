@@ -16,6 +16,11 @@ object Versions {
         const val coroutines = "1.3.5"
     }
 
+    object KTlint {
+        const val ktlint = "0.40.0"
+        const val plugin = "9.4.1"
+    }
+
     object Support {
         const val legacySupport = "1.0.0"
     }
