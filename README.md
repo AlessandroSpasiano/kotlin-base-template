@@ -18,6 +18,7 @@ Once created don't forget to update the:
 - 100% Gradle Kotlin DSL setup.
 - Dependency versions managed via `buildSrc`.
 - Kotlin Static Analysis via `ktlint` and `detekt`.
+- Android Jetpack Compose.
 
 ## Gradle Setup
 
@@ -30,3 +31,6 @@ All dependencies are centralized inside the [Versions.kt](buildSrc/src/main/java
 This template is using [ktlint](https://github.com/pinterest/ktlint) with the [ktlint-gradle](https://github.com/jlleitschuh/ktlint-gradle) plugin to format your code. To reformat all the source code as well as the buildscript you can run the `ktlintFormat` gradle task.
 
 This template is also using [detekt](https://github.com/arturbosch/detekt) to analyze the source code, with the configuration that is stored in the [detekt.yml](config/detekt/detekt.yml) file (the file has been generated with the `detektGenerateConfig` task).
+
+## Android Jetpack Compose
+This template is using [Android Jetpack Compose](https://developer.android.com/jetpack/compose) to build native UI.
