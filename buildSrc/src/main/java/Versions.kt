@@ -21,6 +21,10 @@ object Versions {
         const val plugin = "9.4.1"
     }
 
+    object Detekt {
+        const val detekt = "1.14.2"
+    }
+
     object Support {
         const val legacySupport = "1.0.0"
     }

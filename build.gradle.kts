@@ -1,5 +1,6 @@
 plugins {
     id("org.jlleitschuh.gradle.ktlint") version Versions.KTlint.plugin
+    id("io.gitlab.arturbosch.detekt") version Versions.Detekt.detekt
 }
 
 buildscript {
@@ -27,6 +28,7 @@ allprojects {
 
 subprojects {
     apply {
+        plugin("io.gitlab.arturbosch.detekt")
         plugin("org.jlleitschuh.gradle.ktlint")
     }
 
@@ -41,6 +43,16 @@ subprojects {
         filter {
             exclude("**/generated/**")
             include("**/kotlin/**")
+        }
+    }
+
+    detekt {
+        config = rootProject.files("config/detekt/detekt.yml")
+        reports {
+            html {
+                enabled = true
+                destination = file("build/reports/detekt.html")
+            }
         }
     }
 }
